@@ -9,12 +9,13 @@ def demander_nom():
     return nom
 
 
-def demander_age():
+#on peut aussi passer un parametre a notre fonction
+def demander_age(name):
     # CONVERSION D'UNE CHAINE EN ENTIER
     # GESTION DES ERREURS
     age=0
     while age== 0:
-        age = input("quel est votre age ? ")
+        age = input(name+" quel est votre age ? ")
         try:
             # en convertissant aussi on peut mettre
             # age=int(input("quel est votre age  f"))
@@ -25,9 +26,15 @@ def demander_age():
 
 
 #Appel des fonctions
-nom=demander_nom()
-age=demander_age()
+#une fonction peut etre appeler plusieurs fois
+nom1=demander_nom()
+nom2=demander_nom()
+age1=demander_age(nom1)
+age2=demander_age(nom2)
 
-print(f"vous vous appelez {nom} et vous avez {age} ans")
-print("l'annee prochaine vous aurez "+str(age+1)+" ans")
+print(f"vous vous appelez {nom1} et vous avez {age1} ans")
+print("l'annee prochaine vous aurez "+str(age1+1)+" ans")
+
+print(f"vous vous appelez {nom2} et vous avez {age2} ans")
+print("l'annee prochaine vous aurez "+str(age2+1)+" ans")
 print("MERCI")
