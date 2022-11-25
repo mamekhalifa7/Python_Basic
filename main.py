@@ -1,4 +1,14 @@
 
+def demander_nom():
+    nom=""
+    while nom == "":
+        try:
+            nom = input("quel est votre nom ? ")
+        except:
+            print("ERROR :le nom ne doit pas etre vide")
+    return nom
+
+
 def demander_age():
     # CONVERSION D'UNE CHAINE EN ENTIER
     # GESTION DES ERREURS
@@ -11,17 +21,11 @@ def demander_age():
             age= int(age)
         except ValueError:
             print("ERREUR: vous devez entrer un nombre pour l'age")
-        return age
+    return age
 
-#Demander nom
-nom=""
-while nom=="":
-    try:
-        nom=input("quel est votre nom ? ")
-    except:
-        print("ERROR :le nom ne doit pas etre vide")
 
-#Appel de la fonction demander_age
+#Appel des fonctions
+nom=demander_nom()
 age=demander_age()
 
 print(f"vous vous appelez {nom} et vous avez {age} ans")
