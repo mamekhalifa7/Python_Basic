@@ -12,6 +12,7 @@ def demander_nom():
     return nom
 
 
+
 #on peut aussi passer un parametre a notre fonction
 def demander_age(name):
     # CONVERSION D'UNE CHAINE EN ENTIER
