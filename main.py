@@ -35,6 +35,8 @@ def demander_age(name):
 
 #Appel des fonctions
 #une fonction peut etre appeler plusieurs fois
+
+"""
 nom1=demander_nom()
 nom2=demander_nom()
 age1=demander_age(nom1)
@@ -46,7 +48,10 @@ print("l'annee prochaine vous aurez "+str(age1+1)+" ans")
 print(f"vous vous appelez {nom2} et vous avez {age2} ans")
 print("l'annee prochaine vous aurez "+str(age2+1)+" ans")
 print("MERCI")
-
-afficher(nom1,age1)
+"""
+for i in range(0,5):
+    nom="personne "+str(i+1)
+    age=demander_age(nom)
+    afficher(nom,age)
 
 
