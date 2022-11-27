@@ -1,6 +1,10 @@
 def afficher(nom,age):
 
     print("votre nom est : "+nom+" et vous avez "+str(age)+" ans l'an prochain vous aurez: "+str(age+1)+" ans")
+    if age<18:
+        print("vous etes mineur")
+    else:
+        print("vous etes majeur")
 
 def demander_nom():
     nom=""
