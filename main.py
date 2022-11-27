@@ -1,10 +1,14 @@
-def afficher(nom,age):
-
+def afficher(nom,age,taille=0):
+#on peut aussi ajouter un parametre qui sera optionnel en l'initialisant
+# dans ce cas quand on lappelle on aura besoin de l'appeler
+#si on veut
     print("votre nom est : "+nom+" et vous avez "+str(age)+" ans l'an prochain vous aurez: "+str(age+1)+" ans")
     if age<18:
         print("vous etes mineur")
     else:
         print("vous etes majeur")
+    if not taille== 0:
+        print("vous mesurez "+str(taille))
 
 def demander_nom():
     nom=""
@@ -52,6 +56,6 @@ print("MERCI")
 for i in range(0,5):
     nom="personne "+str(i+1)
     age=demander_age(nom)
-    afficher(nom,age)
+    afficher(nom,age,1.12)
 
 
