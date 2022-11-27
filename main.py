@@ -1,3 +1,6 @@
+def afficher(nom,age):
+
+    print("votre nom est : "+nom+" et vous avez "+str(age)+" ans l'an prochain vous aurez: "+str(age+1)+" ans")
 
 def demander_nom():
     nom=""
@@ -32,9 +35,13 @@ nom2=demander_nom()
 age1=demander_age(nom1)
 age2=demander_age(nom2)
 
-print(f"vous vous appelez {nom1} et vous avez {age1} ans")
+print(f"vous vous appelez {nom1.upper()} et vous avez {age1} ans")
 print("l'annee prochaine vous aurez "+str(age1+1)+" ans")
 
 print(f"vous vous appelez {nom2} et vous avez {age2} ans")
 print("l'annee prochaine vous aurez "+str(age2+1)+" ans")
 print("MERCI")
+
+afficher(nom1,age1)
+
+
