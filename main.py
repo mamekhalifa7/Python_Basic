@@ -59,3 +59,4 @@ for i in range(0,5):
     afficher(nom,age,1.12)
     afficher(nom,age,1.60)
     afficher(nom, age, 1.60)
+    afficher(nom, age, 1.95)
