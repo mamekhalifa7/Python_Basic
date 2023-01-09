@@ -22,13 +22,20 @@ def escalier (taille,nb):
 
 #pour dessiner un carré
 def carre(taille):
-    for i in range(0,taille):
-        t.forward(50)
+    for i in range(0,4):
+        t.forward(taille)
         t.right(90)
+
+#plusiers carres
+def carres (tailledepart,nb):
+    for i in range(0,nb):
+        taille=(i+1)*tailledepart
+        carre(taille)
 
 
 #escalier(30,5)
-carre(4)
+#carre(100)
+carres(10,10)
 turtle.done()
 
 
