@@ -9,7 +9,7 @@ for i in range (1,5):
     t.right(90)
 t.forward(30)
 """
-# avec une fonction
+# avec une fonction pour dessiner des escaliers
 def escalier (taille,nb):
     for i in range(0, nb):
         t.forward(taille)
@@ -20,8 +20,15 @@ def escalier (taille,nb):
         taille-=5
     t.forward(taille)
 
-escalier(30,5)
+#pour dessiner un carré
+def carre(taille):
+    for i in range(0,taille):
+        t.forward(50)
+        t.right(90)
 
+
+#escalier(30,5)
+carre(4)
 turtle.done()
 
 
