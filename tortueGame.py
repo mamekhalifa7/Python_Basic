@@ -16,6 +16,8 @@ def escalier (taille,nb):
         t.left(90)
         t.forward(taille)
         t.right(90)
+        #on peut à chaque tour diminuer la taile de marche de l'escalier
+        taille-=5
     t.forward(taille)
 
 escalier(30,5)
