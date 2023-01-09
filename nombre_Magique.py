@@ -6,6 +6,9 @@ def nombre_magique(min,max):
             nbre_int=int(nbre)
         except:
             print("ERROR: vous devez entrer un nombre ")
+        else:
+            if nbre_int<min or nbre_int>max:
+                print(f" ERROR: le nombre doit etre compris entre{min} et {max} ")
     return nbre_int
 
 
