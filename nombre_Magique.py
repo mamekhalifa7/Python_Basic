@@ -7,10 +7,13 @@ def nombre_magique(min,max):
 nmin=1
 nmax=10
 nmag=5
-nombre=nombre_magique(nmin,nmax)
-if nombre>nmag:
-    print("le nombre magique est plus petit")
-elif nombre<nmag:
-    print("le nombre magique est plus grand")
-else:
-     print("Bravo ! vous avez gagné")
+
+nombre=0
+while not nombre==nmag:
+    nombre=nombre_magique(nmin,nmax)
+    if nombre>nmag:
+        print("le nombre magique est plus petit")
+    elif nombre<nmag:
+        print("le nombre magique est plus grand")
+    else:
+        print("Bravo ! vous avez gagné")
