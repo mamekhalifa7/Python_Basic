@@ -1,6 +1,11 @@
 def nombre_magique(min,max):
-    nbre=input(f"entrer le nombre magique entre {min} et {max} ")
-    nbre_int=int(nbre)
+    nbre_int=0
+    while nbre_int==0:
+        nbre=input(f"entrer le nombre magique entre {min} et {max} ")
+        try:
+            nbre_int=int(nbre)
+        except:
+            print("ERROR: vous devez entrer un nombre ")
     return nbre_int
 
 
