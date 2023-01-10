@@ -27,6 +27,7 @@ nmag=random.randint(nmin,nmax)
 essaie=3
 nombre=0
 nbre_essaie=essaie
+"""
 while not nombre==nmag and nbre_essaie >0:
     print(f'il vous reste {nbre_essaie} essaies')
     nombre=nombre_magique(nmin,nmax)
@@ -39,4 +40,25 @@ while not nombre==nmag and nbre_essaie >0:
     else:
         print("Bravo ! vous avez gagné")
 if nbre_essaie==0:
+    print(f"Vous avez perdu : le nombre magique etait: {nmag}")
+"""
+# limiter le nombre d'essai avec la boucle for:
+nbre=3
+gagne=False
+for i in range(0,nbre):
+    nbre-=i
+    print(f'il vous reste {nbre} essaies')
+    nombre=nombre_magique(nmin,nmax)
+    if nombre>nmag:
+        print("le nombre magique est plus petit")
+        nbre_essaie-=1
+    elif nombre<nmag:
+        print("le nombre magique est plus grand")
+        nbre_essaie-=1
+    else:
+        print("Bravo ! vous avez gagné")
+        gagne=True
+        break
+
+if not gagne:
     print(f"Vous avez perdu : le nombre magique etait: {nmag}")
