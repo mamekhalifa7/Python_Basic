@@ -1,3 +1,5 @@
+
+import random
 def nombre_magique(min,max):
     nbre_int=0
     while nbre_int==0:
@@ -15,7 +17,13 @@ def nombre_magique(min,max):
 
 nmin=1
 nmax=10
-nmag=5
+#nmag=5
+#on peut aussi choisir le nbre magique aléatoirement
+#pour choisir le nombre magique aléatoirement
+#il faut importer d'abord random
+#ensuit random.randint permet de definir la aleatoirement
+#le nbre magique entre une intervalle
+nmag=random.randint(nmin,nmax)
 
 nombre=0
 while not nombre==nmag:
