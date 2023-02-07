@@ -11,7 +11,19 @@ if choice=="1":
     valeur_convertie = round(valeur_float * 2.54, 2)
 print(f"Resultat de conversion : {valeur_float} pouces = {valeur_convertie} cm")
 """
-def conversion(unit1:str , unit2:str , facteur:float):
+def conversion(unit1:str , unit2:str , facteur:float, reverse:bool = False):
+    if reverse:
+        unit1, unit2 = unit2, unit2
+        facteur = 1/facteur
+
+    """ 
+    oubien
+    
+    if reverse:
+        tmp=unit1
+        unit1=unit2
+        unit2=tmp
+   """
     valeur_str= input(f"conversion {unit1} vers {unit2}. Donner la valeur en {unit1} ou q pour quitter \n")
     if valeur_str== "q":
         return True
@@ -45,11 +57,8 @@ while True:
 
 #Conversion des valeurs
 while True:
-    if choice=="1":
-        if conversion("pouce","cm",2.54):
-            break
-    else:
-        if conversion("cm","pouce",0.394):
+    # if inline
+        if conversion("pouce","cm",2.54, reverse=False if choice=="1" else True):
             break
 
 print("******************************************************")
