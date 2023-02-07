@@ -12,7 +12,7 @@ if choice=="1":
 print(f"Resultat de conversion : {valeur_float} pouces = {valeur_convertie} cm")
 """
 def conversion(unit1:str , unit2:str , facteur:float):
-    valeur_str= input(f"conversion {unit1} vers {unit2}. Donner la valeur en {unit1} ou q pour quitter ")
+    valeur_str= input(f"conversion {unit1} vers {unit2}. Donner la valeur en {unit1} ou q pour quitter \n")
     if valeur_str== "q":
         return True
     try:
@@ -31,11 +31,14 @@ def conversion(unit1:str , unit2:str , facteur:float):
 
 while True:
     #Menu du choix de conversion
-    print(" Ce programme vous permet d'effectuer des conversions d'unité")
-    print("1 - pouces vers cm")
-    print("2 - cm vers pouces")
-    print("q -  Quitter")
-    choice = input("votre choix (1 ou 2): ")
+    print("********************************************************************")
+    print("*    Ce programme vous permet d'effectuer des conversions d'unité  *")
+    print("********************************************************************")
+    print("*  1 - pouces vers cm                                              *")
+    print("*  2 - cm vers pouces                                              *")
+    print("*  q -  Quitter                                                    *")
+    print("********************************************************************")
+    choice = input("votre choix (1 ou 2): \n")
     if choice == "1" or choice == "2":
         break
     print("ERROR: vous devez entrer 1 ou 2")
@@ -49,3 +52,6 @@ while True:
         if conversion("cm","pouce",0.394):
             break
 
+print("******************************************************")
+print("*                   FIN PROGRAMME                    *")
+print("******************************************************")
